@@ -40,6 +40,10 @@ export default {
       return Boolean(exists)
 
     },
+<<<<<<< HEAD
     photos: async ({id}, {page}, {loggedInUser}) => await client.user.findUnique({where: {id}}).photos({skip: (page -1) * 6, take: 6})
+=======
+    photos: async ({id}, {page}, {loggedInUser}) => await client.user.findUnique({where: {id}}).photos({skip: (page -1) * 5, take: 5})
+>>>>>>> 21ec01b1797b127a147b0c744c3c8cf8a692c19a
   }
 }
