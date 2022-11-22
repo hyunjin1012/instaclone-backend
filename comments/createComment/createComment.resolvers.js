@@ -10,11 +10,7 @@ const createCommentFn = async (_, {photoId, payload}, {loggedInUser}) => {
       error: "Photo not found."
     }
   }
-<<<<<<< HEAD
   const newComment = await client.comment.create({
-=======
-  const comment = await client.comment.create({
->>>>>>> 21ec01b1797b127a147b0c744c3c8cf8a692c19a
     data: {
       payload,
       photo: {
@@ -30,20 +26,12 @@ const createCommentFn = async (_, {photoId, payload}, {loggedInUser}) => {
     }
     
   })
-<<<<<<< HEAD
   if (newComment) {
     return {
       ok: true,
       error: null,
       newComment,
       id: newComment.id
-=======
-  if (comment) {
-    return {
-      ok: true,
-      error: null,
-      comment
->>>>>>> 21ec01b1797b127a147b0c744c3c8cf8a692c19a
     }
   } else {
     return {
